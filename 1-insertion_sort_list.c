@@ -10,4 +10,22 @@
  */
 void insertion_sort_list(listint_t **list)
 {
+	bool flag = false;
+	listint_t *tmp = NULL, *aux = NULL;
 
+	if (list == NULL || *list == NULL || *list-> == NULL)
+		return;
+
+	tmp = *list;
+	while (tmp->next)
+	{
+		if (tmp->n > tmp->next->n)
+		{
+			tmp->next->prev = tmp->prev;
+			if (tmp->next->prev)
+				tmp->prev->next = tmp->next;
+			else
+				*list = tmp->next;
+		}
+	}
+}
