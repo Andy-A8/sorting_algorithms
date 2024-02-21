@@ -69,7 +69,7 @@ void heap_sort(int *array, size_t size)
 
 	for (i = size - 1; i > 0; i--)
 	{
-		swap_ints(array, array + 1);
+		swap_ints(array, array + i);
 		print_array(array, size);
 		max_heapify(array, size, i, 0);
 	}
