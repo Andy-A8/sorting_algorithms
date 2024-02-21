@@ -53,7 +53,7 @@ void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back)
 		mid = front + (back - front) / 2;
 		merge_sort_recursive(subarr, buff, front, mid);
 		merge_sort_recursive(subarr, buff, mid, back);
-		merge_sort_recursive(subarr, buff, front, mid, back);
+		merge_subarr(subarr, buff, front, mid, back);
 	}
 }
 
